@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_inference"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_editor_absoluteX="0dp"
+    app:layout_editor_absoluteY="80dp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="80dp">
+
+    <Button
+        android:id="@+id/btUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_inference"
+        app:layout_constraintRight_toRightOf="@+id/activity_main_inference" />
+
+    <Button
+        android:id="@+id/btDiscard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/discard"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_inference"
+        app:layout_constraintRight_toLeftOf="@+id/btUpload" />
+
+    <EditText
+        android:id="@+id/edtCamera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/camera_value"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvCamera"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCamera"
+        android:autofillHints="" tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/edtSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/camera_settings"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSettings"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCamera"
+        android:autofillHints="" tools:targetApi="o"/>
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/placeholder"
+        android:scaleType="centerCrop"
+        android:src="@drawable/singapore"
+        app:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFavorite"
+        app:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main_inference"
+        app:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/activity_main_inference"
+        app:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_inference"
+        app:layout_editor_absoluteX="0dp"
+        app:layout_editor_absoluteY="0dp"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/imgFavorite"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/info_background"
+        android:contentDescription="@string/placeholder"
+        android:padding="5dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_creator="0"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_inference"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/activity_main_inference"
+        app:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_inference"
+        app:layout_constraintVertical_bias="0.203"
+        app:layout_editor_absoluteX="359dp"
+        app:layout_editor_absoluteY="104dp"
+        tools:layout_constraintBottom_creator="0"
+        tools:layout_constraintRight_creator="0"
+        tools:layout_constraintTop_creator="0" />
+
+    <TextView
+        android:id="@+id/tvCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:labelFor="@+id/edtCamera"
+        android:text="@string/camera"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvSingapore"
+        app:layout_editor_absoluteX="16dp"
+        app:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:labelFor="@+id/edtSettings"
+        android:text="@string/settings"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvCamera"
+        app:layout_editor_absoluteX="16dp"
+        app:layout_editor_absoluteY="256dp" />
+
+    <TextView
+        android:id="@+id/tvSingapore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:elevation="19dp"
+        android:text="@string/singapore"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/imgHeader"
+        app:layout_editor_absoluteX="16dp"
+        app:layout_editor_absoluteY="160dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
